@@ -1,0 +1,20 @@
+1-  استخدمن inspect عشان ندخل ع ال network واكواد صفحة الويب وعشان نقدر نشوف اسم الادمن او باسورد 
+و البيانات التي يتم عرضها أو إرسالها بين المتصفح والخادم 
+
+2- عايزين نعرف الباسورد بتاع الادمن فاستخدمنا ping عشان نجيب ال ip 
+بتاع الصفحه وحطيناه فب hydra عشان نجيب الباسورد 
+hydra -l admin@juice-sh.op -P /usr/share/wordlists/rockyou.txt 192.168.1.4  https-post-form 
+"/rest/user/login:email=^USER^&password=^PASS^:F=Invalid email or password" -V -I
+
+
+
+3- إذا كان موقع ويب يقبل إدخال النصوص من المستخدمين (مثل التعليقات،) دون التحقق المناسب 
+، ممكن نغدعهم عن طريق  إدخال كود مثل هذا
+<iframe src ="javascript:alert('xss')">
+. عند عرض الإدخال على صفحة ويب أخرى، يتم تنفيذ الكود على متصفح الضحية.
+
+
+
+video link:https://drive.google.com/file/d/1ULzNTHtRL8IC2KSVPajktcRS5I_Bf_ng/view?usp=sharing
+
+
